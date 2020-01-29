@@ -1,0 +1,42 @@
+{
+  "name": "stake-poll-crypto-api",
+  "version": "1.0.0",
+  "description": "Stake poll service for crypto actions",
+  "keywords": ["TypeScript", "express"],
+  "author": "Jozhe",
+  "main": "dist/index.js",
+  "scripts": {
+    "eslint": "eslint src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "compression": "1.7.4",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "nodemon": "2.0.1",
+    "web3": "^1.2.5",
+    "winston": "3.2.1"
+  },
+  "devDependencies": {
+    "@types/compression": "1.0.1",
+    "@types/dotenv": "8.2.0",
+    "@types/express": "4.17.2",
+    "@types/jest": "24.0.23",
+    "@types/supertest": "2.0.8",
+    "@typescript-eslint/eslint-plugin": "2.11.0",
+    "@typescript-eslint/parser": "2.11.0",
+    "eslint": "6.7.2",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "jest": "24.9.0",
+    "jest-express": "1.10.1",
+    "prettier": "1.19.1",
+    "supertest": "4.0.2",
+    "ts-jest": "24.2.0",
+    "typescript": "3.7.3"
+  },
+  "license": "MIT"
+}
