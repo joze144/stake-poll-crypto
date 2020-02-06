@@ -8,5 +8,5 @@ import app from './app';
 import logger from './logger';
 
 app.listen(app.get('port'), (): void => {
-  logger.info(`*\t🌏 Express server started at http://localhost:${app.get('port')}\t\t*`);
+  logger.info(`Express server started at http://localhost:${app.get('port')}`);
 });

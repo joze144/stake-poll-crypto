@@ -3,12 +3,13 @@ import handleErrorMiddleware from '../../middleware/handle-error-middleware';
 import web3 from '../../web3Provider';
 
 let verifySignature: RequestHandler = async (req, res) => {
-  const { address, signature, message } = req.body;
+  const { public_address: address, signature, message } = req.body;
 
-  const recoveredAddress = await web3.eth.personal.ecRecover(message, signature);
+  const checksumAddress = web3.utils.toChecksumAddress(address);
+  const recoveredAddress = await web3.eth.accounts.recover(message, signature);
 
   let valid = false;
-  if (recoveredAddress === address) {
+  if (recoveredAddress === checksumAddress) {
     valid = true;
   }
 
